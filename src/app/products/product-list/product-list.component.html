@@ -28,7 +28,18 @@
         </thead>
         <tbody>
           <tr *ngFor="let product of products">
-            <td></td>
+            <td>
+              <!-- <img [src]="product.imageUrl" alt="" width="100" /> -->
+              <img
+                src="https://res.cloudinary.com/dsg3qer7n/image/upload/v1660123034/{{
+                  product.imageUrl
+                }}"
+                [alt]="product.productName"
+                [title]="product.productName"
+                [style.width.px]="imageWidth"
+                [style.margin.px]="imageMargin"
+              />
+            </td>
             <td>
               {{ product.productName }}
             </td>
