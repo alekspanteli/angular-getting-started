@@ -18,7 +18,7 @@ export class ProductListComponent implements OnInit {
       productCode: 'GDN-0011',
       releaseDate: 'March 19, 2021',
       description: 'Leaf rake with 48-inch wooden handle.',
-      price: 19.95,
+      price: 9.95,
       starRating: 3.2,
       imageUrl: 'logo_xrkp85.jpg',
     },
