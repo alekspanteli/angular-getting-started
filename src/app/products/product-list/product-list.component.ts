@@ -9,6 +9,7 @@ export class ProductListComponent implements OnInit {
   pageTitle: string = 'Product List';
   imageWidth: number = 50;
   imageMargin: number = 20;
+  showImage: boolean = false;
   products: any[] = [
     {
       productId: 1,
@@ -31,6 +32,10 @@ export class ProductListComponent implements OnInit {
       imageUrl: 'saw_vvcnyl.png',
     },
   ];
+
+  toggleImage(): void {
+    this.showImage = !this.showImage;
+  }
 
   constructor() {}
 

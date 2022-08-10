@@ -17,7 +17,9 @@
         <thead>
           <tr>
             <th>
-              <button class="btn btn-primary">Show Image</button>
+              <button class="btn btn-primary" (click)="toggleImage()">
+                {{ showImage ? 'Hide' : 'Show' }}
+              </button>
             </th>
             <th>Product</th>
             <th>Code</th>
@@ -34,6 +36,7 @@
                 src="https://res.cloudinary.com/dsg3qer7n/image/upload/v1660123034/{{
                   product.imageUrl
                 }}"
+                *ngIf="showImage"
                 [alt]="product.productName"
                 [title]="product.productName"
                 [style.width.px]="imageWidth"
