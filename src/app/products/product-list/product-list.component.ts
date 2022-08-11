@@ -4,7 +4,7 @@ import { IProduct } from '../products';
 @Component({
   selector: 'pm-products',
   templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.css'],
+  styleUrls: ['./product-list.component.scss', '../products.scss'],
 })
 export class ProductListComponent implements OnInit {
   pageTitle: string = 'Product List';
@@ -41,5 +41,7 @@ export class ProductListComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log('In OnInit');
+  }
 }
