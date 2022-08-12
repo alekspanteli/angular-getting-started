@@ -56,7 +56,10 @@
               {{ product.price | currency: 'EUR':'symbol':'1.2-2' | lowercase }}
             </td>
             <td>
-              {{ product.starRating }}
+              <pm-star
+                [rating]="product.starRating"
+                (ratingClicked)="onRatingClicked($event)"
+              ></pm-star>
             </td>
           </tr>
         </tbody>
